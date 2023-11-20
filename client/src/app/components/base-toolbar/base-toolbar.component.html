@@ -1,0 +1,32 @@
+<mat-toolbar color="primary">
+    <a [routerLink]='["/feed"]'><span class="toolbar-title">Социальная сеть</span></a>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button *ngIf="authService.isAdmin === 'true'" (click)="window.location.assign(SERVER_URL)" mat-menu-item>
+            <mat-icon>person</mat-icon>
+            <span>Админ-панель</span>
+        </button>
+        <button mat-menu-item (click)="navigate('profile')">
+            <mat-icon>person</mat-icon>
+            <span>Профиль</span>
+        </button>
+        <button mat-menu-item (click)="navigate('friends')">
+            <mat-icon>group</mat-icon>
+            <span>Друзья</span>
+        </button>
+        <button mat-menu-item (click)="navigate('messages')">
+            <mat-icon>chat</mat-icon>
+            <span>Сообщения</span>
+        </button>
+        <button mat-menu-item (click)="navigate('feed')">
+            <mat-icon>feed</mat-icon>
+            <span>Новости</span>
+        </button>
+        <button mat-menu-item (click)="logOutClick()">
+            <mat-icon>logout</mat-icon>
+            <span>Выйти</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>

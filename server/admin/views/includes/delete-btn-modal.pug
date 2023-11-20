@@ -1,0 +1,11 @@
+.modal(tabindex='-1')#delete-btn-modal
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h5.modal-title Удаление
+                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+            .modal-body
+                p Вы уверены, что хотите удалить пользователя?
+            .modal-footer
+                button.btn.btn-secondary#cancel-btn(type='button' data-bs-dismiss='modal') Отмена
+                button.btn.btn-info#confirm-btn(type='button') Да

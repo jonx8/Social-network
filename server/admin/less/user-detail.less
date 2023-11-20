@@ -1,0 +1,88 @@
+@import "layout";
+
+
+#avatar-input {
+    width: 300px;
+}
+
+
+.settings-heading {
+    font-weight: 600;
+    font-size: 26px;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .user-avatar {
+        height: 200px;
+        width: auto;
+    }
+
+
+    form {
+        margin: 5% 0;
+
+        #admin-checkbox {
+            margin-right: 20px;
+        }
+
+
+        select {
+            width: 85%;
+            margin-left: 20px;
+        }
+
+        .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            button.base-btn {
+                font-weight: 500;
+                font-size: 18px;
+                color: @base-color;
+                border-color: @base-color;
+            }
+
+
+            button.base-btn:hover {
+                background-color: @base-color;
+                color: white;
+            }
+        }
+
+        .form-control {
+            width: 250px;
+        }
+
+        .form-label {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+
+
+.navigation-section {
+    align-items: center;
+}
+
+.delete-button-section {
+    #delete-user-button {
+        margin: 0 20px;
+    }
+}
+
+.modal {
+    button.btn-info {
+        color: white;
+        background-color: @base-color;
+    }
+
+    #create-user-button {
+        background-color: #00A4A4;
+    }
+}

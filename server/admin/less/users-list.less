@@ -1,0 +1,54 @@
+@import 'layout';
+
+.users-list-wrapper {
+    margin: 40px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: @plain-font;
+
+    h4 {
+        font-size: 26px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+    }
+
+    .control-panel {
+        select#filter-select {
+            width: 11em;
+            justify-self: flex-start;
+            margin-right: auto;
+        }
+
+        margin: 20px;
+    }
+
+
+    .table {
+        text-align: center;
+        max-width: 80%;
+        font-size: 16px;
+
+        th {
+            min-width: 50px;
+        }
+
+        td {
+            overflow-wrap: break-word;
+
+            a {
+                color: #0267FF;
+                font-weight: 600;
+            }
+
+            a:hover {
+                color: firebrick;
+            }
+        }
+    }
+}
+
+

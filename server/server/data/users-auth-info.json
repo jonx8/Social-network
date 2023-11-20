@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "username": "korytov",
+    "password": "qwerty",
+    "isAdmin": true
+  },
+  {
+    "id": 2,
+    "username": "xekoro10",
+    "password": "$2b$10$TXEb6hbYzZlzwAIb3kue..AiS16yTrFslzIjMoBdFdGABXw2lL7j.",
+    "isAdmin": false
+  },
+  {
+    "id": 3,
+    "username": "vlasov",
+    "password": "$2b$10$aRUctAvFn1g4TMLfGf1U9uOSszfKSiGZSUeBHr4hSFadYcuu30nPe",
+    "isAdmin": true
+  },
+  {
+    "id": 4,
+    "username": "username",
+    "password": "$2b$10$85xbcEPsU8ZRnoV5Pqo.tuQYuf51CQstxVo/ieWnFjMPsN/ovnMre",
+    "isAdmin": true
+  },
+  {
+    "id": 5,
+    "username": "newUser",
+    "password": "$2b$10$5QfM0iC2wYifZQarBTSjCuCu.IT7ih2WOWV4J2vekv28.e4QazkSy",
+    "isAdmin": true
+  }
+]

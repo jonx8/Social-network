@@ -1,0 +1,61 @@
+extends layout
+
+block content
+    a(href='/admin').btn.btn-outline-info.base-btn.mb-4.return-btn  Назад
+    .d-flex.justify-content-center.m-5.mt-0
+        h4.settings-heading Настройки пользователя
+
+
+    .d-flex
+        section.navigation-section.d-flex.flex-column.w-25
+            a.btn.btn-outline-info.btn.base-btn.m-2#news-link Новости
+            a.btn.btn-outline-info.btn.base-btn.m-2#friends-link Друзья
+            a.btn.btn-outline-info.btn.base-btn.m-2#messages-link Сообщения
+
+        section.form-section.d-flex.w-50
+            img(src='/public/images/default-avatar.png' alt='Фото пользователя').user-avatar
+
+            form#user-settings-form(action='/api/users/')
+
+                .d-flex
+                    .mb-3.input-wrapper.m-4
+                        label(for="username-input").form-label Имя пользователя
+                        input.form-control(name='username' type='text' placeholder='Имя пользователя')#username-input
+                    .mb-3.input-wrapper.m-4
+                        label(for="name-input").form-label ФИО
+                        input.form-control(name="fullName" type='text' placeholder='Иванов Иван Иванович')#name-input
+                .d-flex
+                    .mb-3.input-wrapper.m-4
+                        label(for="email-input").form-label Email
+                        input.form-control(name='email' type='text' placeholder='email@example.com')#email-input
+                    .mb-3.input-wrapper.m-4
+                        label(for="birthdate-input").form-label Дата рождения
+                        input.form-control(type="date" name="birthDate")#birthdate-input
+
+                .mb-3.input-wrapper.m-5
+                    label(for="avatar-input").form-label Фотография пользователя
+                    input.form-control(type="file" name="avatar")#avatar-input
+
+                div.d-flex.m-5.justify-content-center
+                    .input-wrapper
+
+                        label.form-label Роль
+                        .form-check.m-2
+                            input(type="checkbox" name="isAdmin").form-check-input.mt-0#admin-checkbox
+                            label(for="admin-checkbox") Администратор
+
+                    .input-wrapper
+                        label(for="status-select").form-label Статус
+                        select(name="status").form-select#status-select
+                            option(value="0")
+                            option(value="Активный") Активный
+                            option(value="Не подтвержден") Не подтвержден
+                            option(value="Заблокирован") Заблокирован
+
+
+                .input-wrapper.m-5
+                    button.btn.btn-outline-info.btn-lg.base-btn#save-button Сохранить
+
+        section.delete-button-section.w-25
+            button.btn.btn-outline-danger.p-2#delete-user-button Удалить
+    include includes/delete-btn-modal

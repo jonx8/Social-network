@@ -1,0 +1,25 @@
+<app-unauthorized-toolbar></app-unauthorized-toolbar>
+
+<div class="form-wrapper">
+
+    <h4 class="mat-headline-4">Добро пожаловать</h4>
+
+    <form [formGroup]="loginForm" id="login-form" (ngSubmit)="submit()">
+        <div *ngIf="unauthorized" class="error-message">
+            Неправильное имя пользователя или пароль
+        </div>
+        <mat-form-field>
+            <mat-label>Имя пользователя</mat-label>
+            <input formControlName="username" matInput placeholder="Имя пользователя">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Пароль</mat-label>
+            <input matInput formControlName="password" placeholder="Пароль" type="password">
+        </mat-form-field>
+        <button mat-raised-button color="primary">Вход</button>
+    </form>
+
+    <p class="signup-label">Ещё не зарегистрированы?</p>
+    <a mat-stroked-button [routerLink]="['/register']" class="signup-link"> Регистрация </a>
+
+</div>

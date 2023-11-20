@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Изменение аватара</h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="avatarForm" id="avatar-form">
+        <input formControlName="avatar" type="file" (change)="onChange($event)" placeholder="Фото">
+        <button mat-flat-button mat-dialog-close color="warn" class="remove-avatar-btn" (click)="resetAvatar()">
+            Удалить фото
+        </button>
+        <button mat-flat-button color="primary" mat-dialog-close (click)="updateAvatar()">Обновить</button>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Закрыть</button>
+</mat-dialog-actions>

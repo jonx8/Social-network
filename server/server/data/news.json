@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "authorId": 1,
+    "authorUsername": "korytov",
+    "published": "2023-11-12T00:12:00",
+    "text": "Хочу купить утюг"
+  },
+  {
+    "id": 2,
+    "authorId": 2,
+    "authorUsername": "xekoro10",
+    "published": "2023-11-14T10:23:12",
+    "text": "Продаю утюг"
+  },
+  {
+    "id": 3,
+    "authorId": 1,
+    "authorUsername": "korytov",
+    "published": "2023-09-12:13:23:11",
+    "text": "Советую всем посетить Черногорию"
+  },
+  {
+    "id": 4,
+    "authorId": 2,
+    "authorUsername": "xekoro10",
+    "published": "2023-11-16T11:22:11",
+    "text": "Продаю холодильник"
+  }
+]

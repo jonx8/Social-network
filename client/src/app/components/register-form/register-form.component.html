@@ -1,0 +1,30 @@
+<app-unauthorized-toolbar></app-unauthorized-toolbar>
+
+<div class="form-wrapper">
+
+  <h4 class="mat-headline-4">Регистрация</h4>
+
+  <form [formGroup]="registerForm" id="register-form" (ngSubmit)="submit()">
+    <mat-form-field>
+      <mat-label>Имя пользователя</mat-label>
+      <input formControlName="username" matInput name="username" placeholder="Имя пользователя">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>ФИО</mat-label>
+      <input matInput formControlName="fullName" placeholder="ФИО" name="fullName">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email" type="email" name="email" placeholder="Email">
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Пароль</mat-label>
+      <input matInput formControlName="password" placeholder="Пароль" name="password" type="password">
+    </mat-form-field>
+    <button mat-raised-button color="primary">Создать аккаунт</button>
+  </form>
+
+  <p class="signin-label">Уже есть аккаунт?</p>
+  <a mat-stroked-button class="signin-link" [routerLink]="['/login']">Вход</a>
+
+</div>

@@ -1,0 +1,32 @@
+<app-base-toolbar></app-base-toolbar>
+
+<div class="headline-wrapper">
+    <h3 class="mat-headline-3 section-headline">Друзья</h3>
+</div>
+<div class="container">
+    <p *ngIf="friendsList.length === 0" class="mat-headline-6">Пока нет друзей</p>
+    <div class="friends-cards">
+        <mat-card class="friend-card" *ngFor="let friend of friendsList">
+            <mat-card-header>
+                <img mat-card-lg-image src="{{SERVER_URL}}{{friend.avatar}}" alt="Фото пользователя">
+                <mat-card-title>
+                    <a [routerLink]="['/users', friend.id]">
+                        {{friend.fullName}}
+                    </a>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    @{{friend.username}}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <button *ngIf="isAuthUser" class="remove-friend-button"
+                        (click)="removeFriend(friend.id)"
+                        mat-flat-button
+                        color="primary">
+                    Удалить из друзей
+                </button>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+</div>

@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "username": "korytov",
+    "email": "korytov@etu.ru",
+    "status": "Активный",
+    "fullName": "Корытов Павел Валерьевич",
+    "birthDate": "1999-03-22",
+    "avatar": "/public/images/default-avatar.png",
+    "isAdmin": true,
+    "friends_id": [
+      2,
+      3
+    ]
+  },
+  {
+    "id": 2,
+    "username": "xekoro10",
+    "email": "xekoro10@gmail.com",
+    "status": "Активный",
+    "fullName": "Малых Андрей Александрович",
+    "birthDate": "2003-06-02",
+    "avatar": "/public/images/default-avatar.png",
+    "isAdmin": false,
+    "friends_id": [
+      1,
+      3,
+      4,
+      5
+    ]
+  },
+  {
+    "id": 3,
+    "username": "vlasov",
+    "email": "vlasov@mail.ru",
+    "status": "Активный",
+    "fullName": "Власов Сергей Павлович",
+    "birthDate": "2000-04-11",
+    "avatar": "/public/images/default-avatar.png",
+    "isAdmin": true,
+    "friends_id": [
+      2,
+      1
+    ]
+  },
+  {
+    "id": 4,
+    "username": "username",
+    "email": "dsf@mail.com",
+    "status": "Активный",
+    "fullName": "Иванов Иван Петрович",
+    "birthDate": "1982-03-13",
+    "isAdmin": true,
+    "avatar": "/public/images/default-avatar.png",
+    "friends_id": [
+      2
+    ]
+  },
+  {
+    "id": 5,
+    "username": "newUser",
+    "email": "pop@mail.com",
+    "status": "Активный",
+    "fullName": "Смирнов Алексей Петрович",
+    "isAdmin": true,
+    "birthDate": "1977-11-13",
+    "avatar": "/public/images/default-avatar.png",
+    "friends_id": [
+      2
+    ]
+  }
+]

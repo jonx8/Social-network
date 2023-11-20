@@ -1,0 +1,62 @@
+<app-base-toolbar></app-base-toolbar>
+
+<div class="container">
+    <mat-card>
+        <img src="{{SERVER_URL}}{{userData?.avatar}}"
+             mat-card-lg-image
+             alt="Фотография пользователя"
+             class="user-avatar-image">
+        <button *ngIf="isAuthUser" mat-flat-button color="accent" class="avatar-dialog-btn"
+                (click)="editAvatarDialog()">
+            Изменить фото
+        </button>
+
+        <mat-card-header>
+            <mat-card-subtitle>
+                @{{userData?.username}}
+            </mat-card-subtitle>
+            <mat-card-title>
+                {{userData?.fullName}}
+            </mat-card-title>
+            <mat-card-subtitle>
+                Дата рождения: {{userData?.birthDate | date:'dd-MM-yyyy'}}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+            <button *ngIf="!isAuthUser" mat-flat-button color="primary" (click)="openDialog(userData?.id ?? -1)">
+                Новое сообщение
+            </button>
+            <button *ngIf="!isAuthUser" color="primary" mat-flat-button
+                    (click)="isFriend ? removeFriend(): addFriend()">
+                {{isFriend ? "Удалить из друзей" : "Добавить в друзья "}}
+            </button>
+            <a [routerLink]="['/friends', userData?.id]" mat-flat-button color="primary">Список друзей</a>
+        </mat-card-actions>
+    </mat-card>
+
+</div>
+
+
+<div class="posts-list">
+    <h5 class="mat-headline-5">Новости пользователя</h5>
+    <form *ngIf="isAuthUser" [formGroup]="newPostForm" id="new-post-form" (ngSubmit)="submitPost()">
+        <mat-form-field>
+            <mat-label>Новость</mat-label>
+            <textarea maxlength="500" matInput placeholder="Новый пост" formControlName="text"></textarea>
+        </mat-form-field>
+        <button mat-flat-button color="primary">Отправить</button>
+    </form>
+    <p *ngIf="newsList.length === 0" class="mat-headline-6">Пока нет новостей</p>
+    <mat-card class="card-post" *ngFor="let post of newsList | newsSort">
+        <mat-card-header>
+            <mat-card-title>{{post.authorUsername}}</mat-card-title>
+            <mat-card-subtitle>
+                {{post.published | date:"yyyy-MM-dd в HH:mm"}}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+            <p>{{post.text}}</p>
+        </mat-card-content>
+    </mat-card>
+
+</div>

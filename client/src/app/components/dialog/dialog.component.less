@@ -1,0 +1,49 @@
+.headline-wrapper {
+    display: flex;
+    justify-content: center;
+
+}
+
+.section-headline {
+    margin: 40px;
+    color: #673ab7;
+}
+
+.return-btn {
+    align-self: flex-start;
+    margin-left: 50px;
+}
+
+.cards-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 70vh;
+
+    .card-post {
+        width: 50%;
+        margin: 10px 0;
+
+        a {
+            text-decoration: none;
+            color: #673ab7;
+        }
+
+        .message-content {
+            overflow-wrap: anywhere;
+        }
+    }
+}
+
+#new-msg-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 50%;
+
+    mat-form-field {
+        width: 75%;
+    }
+}
